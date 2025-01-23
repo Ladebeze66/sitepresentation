@@ -1,0 +1,183 @@
+/* Global Flexbox Layout */
+body, html {
+    height: 100%; /* Assure que le body et html occupent toute la hauteur */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Animation d'introduction */
+#intro-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0a1428; /* Bleu nuit */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Toujours au-dessus */
+    overflow: hidden;
+}
+
+.welcome-message {
+    position: absolute;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    animation: fadeOut 2s ease-out 3s forwards; /* Disparaît après 3 secondes */
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
+
+#matrix-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.site-container {
+    flex: 1; /* Permet au contenu principal d'occuper l'espace disponible */
+    display: flex;
+    display: none; /* Caché par défaut */
+    flex-direction: column;
+}
+
+/* Style global */
+body {
+    font-family: 'Orbitron', sans-serif; /* Police futuriste */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('../images/wallpapersite.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(10, 20, 40, 0.85); /* Bleu nuit subtil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.navbar .nav-link {
+    color: rgba(200, 220, 255, 0.9); /* Bleu clair légèrement atténué */
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.navbar .nav-link:hover {
+    color: rgba(70, 130, 180, 1); /* Bleu ciel pour l'effet au survol */
+    transform: scale(1.1);
+}
+
+/* Sections dynamiques */
+.dynamic-section {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0; /* Espacement entre les sections */
+    text-align: left;
+    border-radius: 20px; /* Coins arrondis pour les encadrés */
+    background: rgba(240, 240, 240, 0); /* Fond clair */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Effet de relief */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Effet au survol des sections */
+.dynamic-section:hover {
+    background: rgba(39, 73, 109, 0.9); /* Fond bleu nuit intense */
+    color: white; /* Texte en blanc */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+}
+
+/* Intitulé des sections */
+.section-title {
+    font-size: 1.8rem; /* Taille légèrement réduite */
+    color: #142850; /* Bleu nuit subtil */
+    padding: 15px 20px;
+    display: inline-block; /* Limite la largeur au texte */
+    margin: 0;
+    border-radius: 15px; /* Coins arrondis */
+    background: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Effet de relief */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Encadré en relief */
+    transition: all 0.3s ease-in-out;
+}
+
+.dynamic-section:hover .section-title {
+    background: #27496d; /* Fond bleu nuit intense au survol */
+    color: white; /* Texte en blanc */
+}
+
+/* Contenu des sections */
+.section-content {
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    padding: 20px;
+}
+
+.dynamic-section:hover .section-content {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Présentation personnelle */
+#presentation-personnelle .profile-picture img {
+    border-radius: 50%; /* Forme circulaire */
+    border: 4px solid rgba(255, 255, 255, 0.9); /* Bordure blanche subtile */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombre */
+    transition: transform 0.3s ease-in-out;
+}
+#presentation-personnelle .profile-picture img:hover {
+    transform: scale(1.1);
+}
+
+/* Explorer Portfolio */
+#explorer-portfolio .btn-primary {
+    background-color: rgba(40, 80, 160, 0.9); /* Bleu atténué */
+    color: rgba(255, 255, 255, 1);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+#explorer-portfolio .btn-primary:hover {
+    background-color: rgba(30, 60, 120, 0.8); /* Bleu plus intense au survol */
+    transform: scale(1.05);
+}
+
+/* Réalisations */
+#realisations .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+#realisations .carousel-item img {
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+#realisations .carousel-item img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+    filter: brightness(110%); /* Légèrement plus lumineux */
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 20, 40, 0.85); /* Bleu nuit subtil */
+    color: rgba(200, 220, 255, 0.9); /* Bleu clair légèrement atténué */
+    padding: 10px 0;
+    text-align: center;
+    border-top: 3px solid rgba(20, 40, 60, 0.9);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Importation de la police Orbitron via Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');

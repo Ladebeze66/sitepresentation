@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez mon portfolio avec mes projets, créations 3D, et IA.">
+    <meta name="author" content="Votre Nom">
+    <title>Portfolio</title>
+    <!-- Fichiers CSS -->
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Conteneur principal -->
+    <div class="site-container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark shadow">
+            <div class="container">
+                <a class="navbar-brand" href="index.html" aria-label="Retour à l'accueil">Mon Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Basculer la navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html" aria-label="Voir mon portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="creations3d.html" aria-label="Voir mes créations 3D">Créations 3D</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ia.html" aria-label="Explorer mes travaux en IA">IA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" aria-label="Me contacter">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Section Portfolio -->
+        <section id="portfolio-sections" class="dynamic-section py-5">
+            <div class="container d-flex flex-column flex-md-row">
+                <!-- Barre des sections -->
+                <aside class="section-menu col-md-4 shadow-lg">
+                    <h4 class="text-center text-white py-3">Mes Projets</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item active" data-target="section-1" aria-label="Présentation de l'école">Présentation de l'école</li>
+                        <li class="list-group-item" data-target="section-2" aria-label="Accéder au projet 2">Projet 2</li>
+                        <li class="list-group-item" data-target="section-3" aria-label="Accéder au projet 3">Projet 3</li>
+                    </ul>
+                    <!-- Lien vers GitHub -->
+                    <div class="mt-4 text-center">
+                        <a href="https://github.com/votre-github" target="_blank" class="btn btn-dark" aria-label="Lien vers mon GitHub">Voir mon GitHub</a>
+                    </div>
+                </aside>
+
+                <!-- Contenu des sections -->
+                <main class="section-content col-md-8">
+                    <div class="content-container shadow-lg p-4 rounded bg-white">
+                        <!-- Section par défaut -->
+                        <div id="section-1" class="section-item active">
+                            <h3>Présentation école 42</h3>
+                            <p id="presentation-text">Chargement des données...</p>
+                        </div>
+                        <!-- Autres sections -->
+                        <div id="section-2" class="section-item">
+                            <h3>Projet 2</h3>
+                            <p id="project-2-text">Chargement des données...</p>
+                        </div>
+                        <div id="section-3" class="section-item">
+                            <h3>Projet 3</h3>
+                            <p id="project-3-text">Chargement des données...</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-white shadow-lg">
+        <p>&copy; 2025 Mon Portfolio - Tous droits réservés</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+</body>
+</html>
