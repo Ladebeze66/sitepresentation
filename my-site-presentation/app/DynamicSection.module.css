@@ -1,0 +1,33 @@
+.dynamic-section {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    text-align: left;
+    border-radius: 20px;
+    background: rgba(240, 240, 240, 0);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.dynamic-section:hover {
+    background: rgba(39, 73, 109, 0.9);
+    color: white;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #142850;
+    padding: 15px 20px;
+    margin: 0;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.dynamic-section:hover .section-title {
+    background: #27496d;
+    color: white;
+}

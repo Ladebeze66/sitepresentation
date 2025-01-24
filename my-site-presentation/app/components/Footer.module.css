@@ -1,0 +1,9 @@
+.footer {
+    background: rgba(10, 20, 40, 0.85); /* Bleu nuit subtil */
+    color: rgba(200, 220, 255, 0.9); /* Bleu clair légèrement atténué */
+    text-align: center;
+    padding: 10px 0;
+    border-top: 3px solid rgba(20, 40, 60, 0.9);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+

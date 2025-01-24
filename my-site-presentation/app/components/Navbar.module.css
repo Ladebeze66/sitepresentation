@@ -1,0 +1,14 @@
+.navbar {
+    background-color: rgba(10, 20, 40, 0.85); /* Bleu nuit subtil */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .nav-link {
+    color: rgba(200, 220, 255, 0.9); /* Bleu clair légèrement atténué */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: rgba(70, 130, 180, 1); /* Bleu ciel pour l'effet au survol */
+    transform: scale(1.1);
+}
